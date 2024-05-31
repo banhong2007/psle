@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read and Highlight Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .text-block {
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="sentences" class="text-block">
+        <p id="sentence1">Should anyone look for me, please let them know I’ll be in my office.</p>
+        <p id="sentence2">My niece, whom I had been teaching for the past few months, did extremely well for her examinations.</p>
+        <p id="sentence3">Siti was at a loss as she heard her best friend discussing cheating during the Science test with another friend of theirs.</p>
+        <p id="sentence4">Uncle Ted is going to bring my brother and me to Legoland as a reward for doing well in school.</p>
+        <p id="sentence5">Juana is 12 years old as of yesterday.</p>
+        <p id="sentence6">Rather than counting on him for help, I decided to do it myself.</p>
+        <p id="sentence7">Mr Tan rarely talks much, does he?</p>
+        <p id="sentence8">Many schools across the country have implemented a longer recess period for their students.</p>
+        <p id="sentence9">I often dream of buying my parents a huge castle if I were a billionaire.</p>
+        <p id="sentence10">Tasha is one of the students who wishes to volunteer to be a buddy for the Primary One students.</p>
+        <p id="sentence11">After many weeks of quarrelling, they finally reconciled their differences.</p>
+        <p id="sentence12">A bomb was found behind the building and a team of experts was called in to defuse it.</p>
+        <p id="sentence13">The protestors are hoping to bring about changes in the way the country is run.</p>
+        <p id="sentence14">Dan’s mean and cruel personality is hidden behind his friendly facade.</p>
+        <p id="sentence15">The movie critique put me off from wanting to watch it.</p>
+    </div>
+    <div id="additionalPassage" class="text-block">
+        <p id="additionalText">
+            Wars do not involve only the military. The sad truth is that hardly anyone escapes its effects. In a war, key installations are targeted as the aim of the enemy is to cripple the other. The enemy would destroy water sources, major transportation routes, power generators and even hospitals. It is not difficult to see that the consequences are dire. The military would not be the only ones affected as civilians, including friends and loved ones, would experience food and water shortages. Imagine being trapped at home in the dark, living in constant fear as planes fly overhead and litter the area with bombs.
+
+            The outrages of war do not end there. Losing the war could bring about further misery in the hands of captors. Our grandparents can testify to the misery of having to endure the Japanese soldiers’ sadistic treatment. It was common for one’s family members to be dragged away for questioning, only to never return.
+        </p>
+    </div>
+    <div id="passage" class="text-block">
+        <p id="textToRead">
+            At the front end of the gunboat, I found a hatch where a ladder lowered into a dark compartment below. 
+            “Let’s put the explosives here and blow the bottom out!” I signalled, while I pointed my torch at the hull’s steel plating below the waterline.
+
+            With little time to waste, we quickly unwrapped the explosives, pressed it like plasticine against the steel and inserted the detonator. 
+            My squad mates grabbed the helicopter ropes as I set the timer for the fuse. Then I swam quickly to the hook dangling beneath the helicopter and was lifted off. 
+            Swinging on the rope, I kept my eye on the barge. I counted down the seconds in my head but sensed something was amiss.
+
+            Just at that moment, a flash lit the sky, followed by a loud explosion. The entire front of the enemy boat was blown away. 
+            The gunboat sank beneath the water and disappeared. On our chopper, we looked at one another and heaved a sigh of relief.
+        </p>
+    </div>
+    <div id="finalPassage" class="text-block">
+        <p id="finalText">
+            Do you snore in your sleep? Well, snoring is a common problem that can affect anyone regardless of age. Snoring happens when a person is unable to breathe freely through his or her nose and mouth during sleep. The irritating sound is caused when certain parts in the mouth and throat such as the tongue and the upper throat vibrate and knock against one another. Although snoring is not a serious medical problem, it can affect the quality of sleep of both the snorer and those who live with him or her.
+
+            There are a few causes that lead to snoring. Allergies can result in a blocked nose and prevent a person from breathing normally while sleeping. Research states that being overweight can cause the narrowing of airways, thus resulting in snoring. Snoring is also linked to sleep apnea – a serious sleep disorder in which the patient actually stops breathing for short amounts of time. This can be life-threatening.
+
+            In some cases, sleep may be disrupted because the tissue that separates the two nostrils in the nose is crooked. Surgery is recommended in this case as it will not only stop the snoring, but also assist in breathing more easily.
+        </p>
+    </div>
+    <div id="examPassage" class="text-block">
+
+            I used to have a pet dog named Brave. My friends were always envy of me, and of him. Brave was on the playful side, and we would ophen play together and run around the neighbourhood park. 
+            He gritted me when I returned home, wagging his tail. It had been another tipikal day at school. I was on my way home when I came across a young brown mutt at the side of the road. 
+            It was wining. I followed it into the park out of curious, where I found a larger red dog lying on its side. I was heartbroken when I realised it was dying. Since the larger dog drew its last breath, I decided that I would take care of the young dog, in place at its mother. I brought it home and named it Brave.
+            At first, my mother was edament against having Brave stay with us. However, after much pleading and persuade, my parents allowed me to keep him. Brave was to be my best friend throughout my childhood. 
+            It has been two years since Brave past away. I watched him grow from a small puppy to a large, dependable dog. I grew with him, and when he died, a part of me died with him.
+    </div>
+    <button onclick="readAllTexts()">Submit</button>
+
+    <script>
+        function readText(id, callback) {
+            const textElement = document.getElementById(id);
+            const text = textElement.innerText.split(' ');
+            let currentIndex = 0;
+
+            const utterance = new SpeechSynthesisUtterance();
+            utterance.lang = 'en-US';
+            utterance.rate = 0.8; // Set reading speed to slightly slower
+
+            utterance.onstart = function() {
+                textElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            };
+
+            utterance.onboundary = function(event) {
+                if (event.name === 'word') {
+                    highlightWord(currentIndex);
+                    currentIndex++;
+                }
+            };
+
+            utterance.onend = function() {
+                clearHighlight();
+                if (callback) {
+                    setTimeout(callback, 2000); // 2 seconds pause before calling the next function
+                }
+            };
+
+            utterance.text = text.join(' ');
+            speechSynthesis.speak(utterance);
+
+            function highlightWord(index) {
+                clearHighlight();
+                if (index < text.length) {
+                    const words = textElement.innerText.split(' ');
+                    words[index] = `<span class="highlight">${words[index]}</span>`;
+                    textElement.innerHTML = words.join(' ');
+                }
+            }
+
+            function clearHighlight() {
+                textElement.innerHTML = text.join(' ');
+            }
+        }
+
+        function readAllTexts() {
+            const ids = [
+                'sentence1', 'sentence2', 'sentence3', 'sentence4', 'sentence5',
+                'sentence6', 'sentence7', 'sentence8', 'sentence9', 'sentence10',
+                'sentence11', 'sentence12', 'sentence13', 'sentence14', 'sentence15', 
+                'additionalText', 'textToRead', 'finalText', 'examText'
+            ];
+
+            function createCallback(index) {
+                return function() {
+                    readText(ids[index], index + 1 < ids.length ? createCallback(index + 1) : null);
+                };
+            }
+
+            readText(ids[0], createCallback(1));
+        }
+    </script>
+</body>
+</html>
